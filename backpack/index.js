@@ -34,7 +34,7 @@ const users = [
   },
 ];
 
-function arrayFilteringAndMapping() {
+function arrayFilteringAndMapping(users) {
   // filter all females
   const females = users.filter((user) => user.gender === "female");
   //*   console.log("females", females);
@@ -46,7 +46,7 @@ function arrayFilteringAndMapping() {
   return result;
 }
 
-// console.log(arrayFilteringAndMapping());
+// console.log(arrayFilteringAndMapping(users));
 
 //* 5.Task: Array Reduction
 //! Create an array of numbers. Write a function that uses the reduce method to calculate the sum of all even numbers in the array
@@ -84,5 +84,26 @@ function sumOfAllEvenNum(numbers) {
   );
   return sumOfAllEvenNum;
 }
-const numbers = [20, 45, 62, 31, 96, 55, 12, 18, 34, 36, 51];
+
+const numbers = [20, 45, 62, 31, 96, 55, 12, 18, 34, 36, 51]; //  multiple times i using this array for different function
 // console.log(sumOfAllEvenNum(numbers));
+
+//! 08. Task: Find Maximum Value:
+//* Write a function that takes an array of numbers and returns the maximum value.
+
+function findMaximumValue(arr) {
+  let largestNum = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    // all numbers in array
+    const element = arr[i];
+    // console.log(element);
+    if (element > largestNum) {
+      largestNum = arr[i];
+    }
+  }
+
+  return largestNum;
+}
+
+// console.log(findMaximumValue(numbers));
