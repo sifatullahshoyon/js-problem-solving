@@ -135,4 +135,45 @@ function uniqueValues(arr) {
 
 const numbersTwo = [45, 16, 35, 16, 45, 37, 8, 12, 15, 8, 8, 17, 12];
 
-console.log(uniqueValues(numbersTwo));
+// console.log(uniqueValues(numbersTwo));
+
+//* 2.Task: Object Manipulation
+//! Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
+
+function representingBooks(books) {
+  let newArray = [];
+  books.map((book) => {
+    newArray.push(book.title);
+  });
+  return newArray;
+}
+
+const books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+  { title: "Moby-Dick", author: "Herman Melville", year: 1851 },
+  { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+];
+
+// console.log(representingBooks(books));
+
+//! 6. Task: Leap Year Checker
+//** */ Write a function that determines whether a given year is a leap year.
+//* Example: Happy New Year
+
+function leapYearChecker(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 !== 0) {
+        return "Happy New Year";
+      }
+    }
+    return "Happy New Year";
+  } else {
+    return "Not Leap Year";
+  }
+}
+
+const year = 2024;
+// console.log(leapYearChecker(year));
