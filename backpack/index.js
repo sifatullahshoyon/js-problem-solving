@@ -107,3 +107,32 @@ function findMaximumValue(arr) {
 }
 
 // console.log(findMaximumValue(numbers));
+
+//! 7. Task: Unique Values
+//* Create an array of numbers with some duplicate values. Write a function to filter out the duplicate values and return a new array with only unique numbers. Print the result.
+
+function uniqueValues(arr) {
+  let newArray = [];
+
+  //   for (let i = 0; i < arr.length; i++) {
+  //     const element = arr[i];
+  //     // console.log(element);
+  //     if (element === arr) {
+  //       console.log(element);
+  //     }
+  //   }
+
+  arr.forEach((element) => {
+    if (!newArray.includes(element)) {
+      newArray.push(element);
+    }
+  });
+
+  //   console.log(newArray);
+
+  return newArray;
+}
+
+const numbersTwo = [45, 16, 35, 16, 45, 37, 8, 12, 15, 8, 8, 17, 12];
+
+console.log(uniqueValues(numbersTwo));
